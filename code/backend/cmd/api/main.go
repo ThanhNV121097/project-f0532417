@@ -14,7 +14,7 @@ import (
 	"time"
 
 	"github.com/ThanhNV121097/project-f0532417/backend/migrations"
-	"github.com/jackc/pgx/v5/stdlib"
+	_ "github.com/jackc/pgx/v5/stdlib"
 )
 
 func main() {
