@@ -144,7 +144,7 @@ is missing from the design.
 
 | Screen | Section in the design | Functions it serves | States that must exist |
 |---|---|---|---|
-| Greeting editor | `main aria-label="Greeting editor"` in approved design | GREETING-001, GREETING-002, GREETING-003 | default |
+| Greeting editor | `main aria-label="Greeting editor"` in approved design | GREETING-001, GREETING-002, GREETING-003 | default, button hover |
 
 ## 6. Non-functional requirements
 
