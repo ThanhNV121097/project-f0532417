@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello World Acceptance 4</title>
+  <style>
+    :root {
+      --background: #FFFFFF;
+      --text: #000000;
+      --primary: #2563EB;
+      --primary-hover: #1D4ED8;
+      --focus: #2563EB;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    main {
+      width: min(100%, 560px);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 32px;
+      font-size: clamp(48px, 10vw, 88px);
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+    }
+
+    label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    input {
+      width: min(100%, 360px);
+      min-height: 48px;
+      padding: 0 14px;
+      border: 1px solid var(--text);
+      border-radius: 6px;
+      background: var(--background);
+      color: var(--text);
+      font: inherit;
+      font-size: 16px;
+    }
+
+    button {
+      min-height: 48px;
+      padding: 0 22px;
+      border: 1px solid var(--primary);
+      border-radius: 6px;
+      background: var(--primary);
+      color: #FFFFFF;
+      font: inherit;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: var(--primary-hover);
+      border-color: var(--primary-hover);
+    }
+
+    input:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 520px) {
+      form {
+        flex-direction: column;
+      }
+
+      input,
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main aria-label="Greeting editor">
+    <h1 id="greeting">Hello, World!</h1>
+    <form id="greeting-form" novalidate>
+      <label for="greeting-input">Greeting</label>
+      <input id="greeting-input" name="greeting" type="text" value="Hello, World!" required autocomplete="off">
+      <button type="submit">Save</button>
+    </form>
+  </main>
+  <script>
+    const form = document.getElementById('greeting-form');
+    const heading = document.getElementById('greeting');
+    const input = document.getElementById('greeting-input');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const nextGreeting = input.value.trim();
+      if (!nextGreeting) {
+        input.focus();
+        return;
+      }
+      heading.textContent = nextGreeting;
+      input.value = nextGreeting;
+    });
+  </script>
+</body>
+</html>
