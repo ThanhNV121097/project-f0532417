@@ -95,7 +95,7 @@ Behaviour:
 4. Form includes one visually hidden label with text `Greeting` associated to the text input.
 5. Form includes one single-line text input named `greeting`, required, with autocomplete off.
 6. Form includes one submit button labelled `Save`.
-7. Page has white background, black text, blue `#2563EB` primary button, no navigation, and no animation.
+7. Page has white background, black text, blue `#2563EB` primary button, darker blue `#1D4ED8` primary button hover state, no navigation, and no animation.
 8. At widths up to 520px, input and button stack vertically and fill available width.
 
 **Acceptance criteria** — each is proved by at least one test case in
