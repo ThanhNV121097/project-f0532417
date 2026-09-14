@@ -22,7 +22,10 @@ func main() {
 	if databaseURL == "" {
 		log.Fatal("DATABASE_URL is required")
 	}
-	db := stdlib.OpenDB(*stdlib.ParseConfigOrPanic(databaseURL))
+	db, err := sql.Open("pgx", databaseURL)
+	if err != nil {
+		log.Fatalf("open database: %v", err)
+	}
 	defer db.Close()
 
 	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
