@@ -122,7 +122,7 @@ defined outcome; "should not happen" is not an outcome.
 |---|---|---|
 | Invalid input | Greeting is empty or whitespace-only | Nothing is saved; existing heading stays unchanged; input receives focus. No error text is shown because approved design has no error state. |
 | Boundary | Greeting length is 1 to 200 characters after trimming | Accepted and persisted. |
-| Boundary | Greeting length is more than 200 characters after trimming | Rejected by API contract; no new screen state is required because approved design has no error state. |
+| Boundary | Greeting length is more than 200 characters after trimming | Rejected by API contract; nothing is saved; existing stored greeting and heading stay unchanged. No error text is shown because approved design has no error state. |
 | Not found | Stored greeting row is absent | Product recreates or returns initial greeting `Hello, World!`; Visitor never sees a not-found screen. |
 | Not permitted | Visitor is not signed in | Not applicable: module has no sign-in or permission differences. |
 | Conflict | Two Visitors save different greetings | Last completed save wins; reload shows the latest stored greeting. |
