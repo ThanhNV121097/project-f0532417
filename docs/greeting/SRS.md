@@ -110,8 +110,9 @@ conditions: one behaviour per criterion.
 | AC-3 | Visitor opens the page | Page renders | There is one text input with accessible label `Greeting` |
 | AC-4 | Visitor opens the page | Page renders | There is one submit button labelled `Save` |
 | AC-5 | Visitor opens the page | Page renders | Button background color is `#2563EB` in default state |
-| AC-6 | Visitor opens the page at 320px viewport width | Page renders | Page has no horizontal scroll and form controls fit within viewport |
-| AC-7 | Visitor tabs through controls | Input or button receives keyboard focus | Focus-visible outline is blue and visible |
+| AC-6 | Visitor hovers the `Save` button with a pointer device | Hover state renders | Button background color is `#1D4ED8` |
+| AC-7 | Visitor opens the page at 320px viewport width | Page renders | Page has no horizontal scroll and form controls fit within viewport |
+| AC-8 | Visitor tabs through controls | Input or button receives keyboard focus | Focus-visible outline is blue and visible |
 
 **Failure, boundary and permission behaviour** — the part most often skipped
 and most often the source of bugs. Every case this function actually has needs a
