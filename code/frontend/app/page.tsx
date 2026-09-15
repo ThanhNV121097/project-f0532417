@@ -1,3 +1,8 @@
+import PersistedEditableGreeting from "../components/PersistedEditableGreeting";
+import { getGreeting } from "../lib/mock/persisted-editable-greeting";
+
 export default function Page() {
-  return null;
+  const { greeting } = getGreeting();
+
+  return <PersistedEditableGreeting initialGreeting={greeting} />;
 }
